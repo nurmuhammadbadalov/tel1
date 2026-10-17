@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot Tafsilotlari — Telbozor Toshkent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { brand: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }, dark: '#0f172a' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-tight">Telbozor</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-wider uppercase">Toshkent</span>
+                    </div>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="text-sm font-bold text-slate-600 hover:text-brand-600 flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Katalogga qaytish
+                    </a>
+                    <a href="checkout.html" class="relative p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
+                        <span id="cartBadge" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-600 text-white rounded-full text-xs flex items-center justify-center font-bold">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Product View Section -->
+    <main class="py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs font-medium text-slate-400 mb-8">
+                <a href="index.html" class="hover:text-brand-600">Bosh sahifa</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <a href="index.html#catalog" class="hover:text-brand-600">Smartfonlar</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <span id="breadcrumbTitle" class="text-slate-800 font-semibold">Mahsulot</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+                
+                <!-- Product Gallery Column -->
+                <div class="lg:col-span-6 flex flex-col gap-4">
+                    <div class="bg-slate-100 rounded-2xl p-8 flex items-center justify-center h-96 relative border border-slate-200/50">
+                        <span id="productBadge" class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Original</span>
+                        <img id="mainImage" src="" alt="" class="max-h-full object-contain transition-all duration-300">
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="grid grid-cols-4 gap-3">
+                        <button onclick="changeImage(this.children[0].src)" class="bg-slate-50 border-2 border-brand-600 rounded-xl p-2 h-20 flex items-center justify-center">
+                            <img id="thumb1" src="" class="max-h-full object-contain">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Info & Buying Actions -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <span id="productBrand" class="text-xs font-bold text-brand-600 uppercase tracking-wider"></span>
+                            <span class="text-xs text-amber-500 font-bold flex items-center gap-1"><i class="fa-solid fa-star"></i> 4.9 (48 ta sharh)</span>
+                        </div>
+                        <h1 id="productTitle" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4"></h1>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 mb-6 flex items-baseline gap-3">
+                            <span id="productPrice" class="text-3xl font-extrabold text-brand-600"></span>
+                            <span id="productOldPrice" class="text-sm text-slate-400 line-through"></span>
+                            <span class="ml-auto text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">Mavjud (Omborda)</span>
+                        </div>
+
+                        <!-- Storage Selector -->
+                        <div class="mb-6">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Xotira hajmini tanlang:</label>
+                            <div class="flex gap-3">
+                                <button class="px-4 py-2.5 rounded-xl border-2 border-brand-600 bg-brand-50 text-brand-700 font-bold text-sm">256 GB</button>
+                                <button class="px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-300 font-semibold text-sm text-slate-600">512 GB</button>
+                                <button class="px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-300 font-semibold text-sm text-slate-600">1 TB</button>
+                            </div>
+                        </div>
+
+                        <!-- Color Selector -->
+                        <div class="mb-8">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Rangni tanlang:</label>
+                            <div class="flex gap-3">
+                                <div class="w-9 h-9 rounded-full bg-slate-800 ring-2 ring-offset-2 ring-brand-600 cursor-pointer"></div>
+                                <div class="w-9 h-9 rounded-full bg-slate-300 cursor-pointer"></div>
+                                <div class="w-9 h-9 rounded-full bg-amber-200 cursor-pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buy Buttons -->
+                    <div class="space-y-3 pt-6 border-t border-slate-100">
+                        <button onclick="buyNow()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-600/30 transition-all flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Sotib olish / Rasmiylashtirish</span>
+                        </button>
+                        <a id="telegramDirectBtn" href="https://t.me/Telfon_telbozoriii_Toshkent" target="_blank" class="w-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold py-3.5 rounded-xl border border-sky-200 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-telegram text-lg"></i>
+                            <span>Telegram menejer bilan bog'lanish</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specifications Table -->
+            <div class="mt-12 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80">
+                <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-brand-600"></i> To'liq Texnik Xarakteristikalar
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 text-sm">
+                    <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Ekran:</span><span class="font-semibold text-slate-800">6.7" Super Retina XDR OLED (120Hz)</span></div>
+                    <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Protsessor:</span><span class="font-semibold text-slate-800">Apple A18 Pro / Snapdragon 8 Gen 3</span></div>
+                    <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Asosiy Kamera:</span><span class="font-semibold text-slate-800">48 MP + 12 MP + 12 MP (5x optik zoom)</span></div>
+                    <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Batareya:</span><span class="font-semibold text-slate-800">4422 mAh (Tezkor va simsiz quvvatlash)</span></div>
+                    <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Kafolat:</span><span class="font-semibold text-slate-800">1 yil rasmiy servis kafolati</span></div>
+                    <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Holati:</span><span class="font-semibold text-slate-800">Yangi, pachka (Muhrlangan)</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const products = [
+            { id: 1, name: "Apple iPhone 17 Pro Max", brand: "Apple", price: 15400000, oldPrice: 16500000, image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&auto=format&fit=crop&q=60", badge: "Hit savdo" },
+            { id: 2, name: "Samsung Galaxy S26 Ultra", brand: "Samsung", price: 14800000, oldPrice: 15900000, image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&auto=format&fit=crop&q=60", badge: "Yangi" },
+            { id: 3, name: "Xiaomi 14 Ultra", brand: "Xiaomi", price: 11200000, oldPrice: 12000000, image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&auto=format&fit=crop&q=60", badge: "Chegirma" },
+            { id: 4, name: "Apple iPhone 15 Pro", brand: "Apple", price: 12500000, oldPrice: 13500000, image: "https://images.unsplash.com/photo-1695048065244-f2a8747209d7?w=500&auto=format&fit=crop&q=60", badge: "Top" }
+        ];
+
+        let currentProduct = null;
+
+        function loadProduct() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = parseInt(urlParams.get('id')) || 1;
+            currentProduct = products.find(p => p.id === id) || products[0];
+
+            document.title = `${currentProduct.name} — Telbozor Toshkent`;
+            document.getElementById('breadcrumbTitle').innerText = currentProduct.name;
+            document.getElementById('productTitle').innerText = currentProduct.name;
+            document.getElementById('productBrand').innerText = currentProduct.brand;
+            document.getElementById('productPrice').innerText = currentProduct.price.toLocaleString() + " so'm";
+            document.getElementById('productOldPrice').innerText = currentProduct.oldPrice.toLocaleString() + " so'm";
+            document.getElementById('mainImage').src = currentProduct.image;
+            document.getElementById('thumb1').src = currentProduct.image;
+            document.getElementById('productBadge').innerText = currentProduct.badge;
+        }
+
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+
+        function buyNow() {
+            let cart = JSON.parse(localStorage.getItem('telbozor_cart')) || [];
+            const existing = cart.find(i => i.id === currentProduct.id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...currentProduct, qty: 1 });
+            }
+            localStorage.setItem('telbozor_cart', JSON.stringify(cart));
+            window.location.href = "checkout.html";
+        }
+
+        window.onload = loadProduct;
+    </script>
+</body>
+</html>

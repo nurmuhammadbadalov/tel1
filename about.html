@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz haqimizda va Kafolat — Telbozor Toshkent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { brand: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }, dark: '#0f172a' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <span class="text-xl font-extrabold text-slate-900">Telbozor Toshkent</span>
+            </a>
+            <div class="flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-brand-600">Bosh sahifa</a>
+                <a href="index.html#catalog" class="hover:text-brand-600">Katalog</a>
+                <a href="checkout.html" class="bg-brand-600 text-white px-4 py-2 rounded-xl">Savatcha</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="bg-gradient-to-r from-slate-900 to-brand-900 text-white py-16">
+        <div class="container mx-auto px-4 text-center max-w-3xl">
+            <h1 class="text-3xl sm:text-5xl font-extrabold mb-4">Rasmiy Kafolat va Ishonchli Xizmat</h1>
+            <p class="text-slate-300 text-sm sm:text-base">
+                Toshkentdagi yetakchi telefon do'koni va telegram kanali. Biz faqat 100% original va yangi qurilmalarni sotamiz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">1 Yillik Kafolat</h3>
+                    <p class="text-slate-500 text-sm">Barcha sotib olingan telefonlarga 1 yillik rasmiy servis markazi kafolati beriladi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Tezkor Yetkazish</h3>
+                    <p class="text-slate-500 text-sm">Toshkent shahri bo'ylab buyurtmangiz 1-2 soat ichida eshigingizgacha yetkazib beriladi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm text-center">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">100% Original</h3>
+                    <p class="text-slate-500 text-sm">Bizda hech qanday reshub yoki ishlatilgan telefonlar yo'q. Faqat zavod muhridagi pachka telefonlar.</p>
+                </div>
+            </div>
+
+            <!-- Stores Location & Telegram Contact -->
+            <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mb-4">Toshkentdagi Do'konimizga Tashrif Buyuring</h2>
+                    <p class="text-slate-600 text-sm mb-6">
+                        Telefonlarni joyida ko'rib, ushlab tekshirib olishni xohlasangiz, Malika savdo markazidagi do'konimizga kelishingiz mumkin.
+                    </p>
+                    <ul class="space-y-4 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-brand-600 text-lg"></i> Toshkent sh., Shayxontohur t., Malika SM, 3-blok, 12-do'kon</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-600 text-lg"></i> +998 (99) 123-45-67 / +998 (90) 987-65-43</li>
+                        <li class="flex items-center gap-3"><i class="fa-brands fa-telegram text-brand-600 text-lg"></i> @Telfon_telbozoriii_Toshkent</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-100 rounded-2xl p-6 border border-slate-200 text-center">
+                    <i class="fa-brands fa-telegram text-6xl text-sky-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Telegram Kanalimizga Obuna Bo'ling</h3>
+                    <p class="text-xs text-slate-500 mb-6">Har kunlik valyuta kursi bo'yicha eng yangilangan narxlar va chegirmalar kanalda!</p>
+                    <a href="https://t.me/Telfon_telbozoriii_Toshkent" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-all inline-block">
+                        Kanalga O'tish
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+        <p>&copy; 2026 Telbozor Toshkent. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+</html>

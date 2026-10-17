@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijozlar Sharhlari va Fikrlar — Telbozor Toshkent</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="hidden sm:flex items-center gap-2">
+                <i class="fa-solid fa-star text-amber-300"></i>
+                <span>Mijozlarimizning 99% hursand va mamnun!</span>
+            </div>
+            <div class="mx-auto sm:mx-0 flex items-center gap-2">
+                <span>Real xaridorlar va Telegram kanalimiz obunachilaridan sharhlar</span>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://t.me/Telfon_telbozoriii_Toshkent" target="_blank" class="hover:underline flex items-center gap-1">
+                    <i class="fa-brands fa-telegram"></i> Telegram Kanal
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mobile-screen-button text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-tight">Telbozor</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-wider uppercase">Toshkent</span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                    <a href="index.html" class="hover:text-brand-600 transition-colors">Bosh sahifa</a>
+                    <a href="index.html#catalog" class="hover:text-brand-600 transition-colors">Katalog</a>
+                    <a href="reviews.html" class="text-brand-600 flex items-center gap-1.5"><i class="fa-solid fa-comments"></i> Sharhlar</a>
+                    <a href="about.html" class="hover:text-brand-600 transition-colors">Kafolat va Do'konlar</a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <a href="checkout.html" class="relative p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
+                        <span id="cartBadge" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-600 text-white rounded-full text-xs flex items-center justify-center font-bold">0</span>
+                    </a>
+                    <a href="https://t.me/Telfon_telbozoriii_Toshkent" target="_blank" class="hidden sm:flex items-center gap-2 bg-sky-50 text-sky-600 hover:bg-sky-100 font-semibold px-4 py-2.5 rounded-xl text-sm transition-colors">
+                        <i class="fa-brands fa-telegram text-lg"></i>
+                        <span>Kanal</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title Hero Section -->
+    <section class="bg-gradient-to-br from-slate-900 via-indigo-950 to-brand-900 text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+            <span class="bg-brand-500/20 text-brand-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-400/30 inline-block mb-4">
+                Xaridorlar Fikri
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Mijozlarimiz Biz Haqimizda Nima Deyishadi?</h1>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Toshkent bo'yicha 10,000 dan ortiq mamnun xaridorlar! Biz har bir telefon sifatiga va rasmiy kafolatga to'liq javob beramiz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Rating Overview & Add Review Section -->
+    <section class="py-12 -mt-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Overall Rating Stats -->
+                <div class="lg:col-span-5 text-center lg:border-r border-slate-100 lg:pr-8">
+                    <div class="text-6xl font-extrabold text-slate-900 mb-2">4.9<span class="text-2xl text-slate-400 font-normal">/5.0</span></div>
+                    <div class="flex justify-center items-center gap-1 text-amber-400 text-xl mb-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-600 mb-6">2,450+ xaridorlar baholashi asosida</p>
+                    
+                    <div class="space-y-2 text-xs">
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-slate-600">5 yulduz</span>
+                            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[92%] rounded-full"></div>
+                            </div>
+                            <span class="w-8 font-semibold text-slate-400">92%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-slate-600">4 yulduz</span>
+                            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[6%] rounded-full"></div>
+                            </div>
+                            <span class="w-8 font-semibold text-slate-400">6%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-slate-600">3 yulduz</span>
+                            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[2%] rounded-full"></div>
+                            </div>
+                            <span class="w-8 font-semibold text-slate-400">2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Form Trigger -->
+                <div class="lg:col-span-7">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Siz ham o'z fikringizni qoldiring!</h3>
+                    <p class="text-sm text-slate-500 mb-6">Bizdan telefon xarid qildingizmi? O'zingizning xolis sharhingizni yozib qoldiring, bu boshqa xaridorlarga yordam beradi.</p>
+
+                    <form onsubmit="submitReview(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="reviewerName" required placeholder="Ismingiz va Familiyangiz" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600">
+                            <select id="reviewerRating" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600 font-semibold">
+                                <option value="5">⭐⭐⭐⭐⭐ 5 yulduz (A'lo)</option>
+                                <option value="4">⭐⭐⭐⭐ 4 yulduz (Yaxshi)</option>
+                                <option value="3">⭐⭐⭐ 3 yulduz (Qoniqarli)</option>
+                            </select>
+                        </div>
+                        <textarea id="reviewerComment" required rows="3" placeholder="Sotib olgan telefoningiz va yetkazib berish xizmati haqida yozing..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-600"></textarea>
+                        
+                        <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg shadow-brand-600/30 transition-all flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Sharhni Yuborish</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews List Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-extrabold text-slate-900">So'nggi Sharhlar</h2>
+                <span class="text-xs font-semibold text-slate-400">Saralangan sharhlar</span>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div id="reviewsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 font-bold flex items-center justify-center text-sm">
+                                    JS
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Jamshid Solihov</h4>
+                                    <span class="text-[11px] text-slate-400">1 soat oldin • iPhone 17 Pro Max</span>
+                                </div>
+                            </div>
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            "Juda tez yetkazib berishdi! Buyurtma qilganimdan 45 minut o'tib Yunusobodga yetkazib berishdi. Telefon muhrlangan, imei o'tgan, narxi ham Malikadagidan arzonroq ekan. Rahmat!"
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-emerald-600 font-bold">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Tasdiqlangan Xaridor</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-sm">
+                                    AM
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Azizbek Mahmudov</h4>
+                                    <span class="text-[11px] text-slate-400">Kecha • Samsung S26 Ultra</span>
+                                </div>
+                            </div>
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            "S26 Ultra oldim. Telegram bot orqali ariza qoldirgan edim, darhol aloqaga chiqishdi va kuryer olib keldi. Kafolat taloni ham bor. Ishonchli magazin, barchaga tavsiya qilaman!"
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-emerald-600 font-bold">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Tasdiqlangan Xaridor</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 font-bold flex items-center justify-center text-sm">
+                                    NR
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Nodira Rahimboyeva</h4>
+                                    <span class="text-[11px] text-slate-400">3 kun oldin • Xiaomi 14 Ultra</span>
+                                </div>
+                            </div>
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            "Sovg'a uchun olgandim, chiroyli qilib paketlab yetkazib berishdi. Narxlari telegram kanallarida har kuni yangilanib turishi juda qulay."
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-emerald-600 font-bold">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Tasdiqlangan Xaridor</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 bg-white mt-12 border-t border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h2 class="text-2xl font-extrabold text-slate-900 text-center mb-8">Tez-tez Beriladigan Savollar (FAQ)</h2>
+
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-2xl p-5 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 text-base mb-2"><i class="fa-solid fa-circle-question text-brand-600 mr-2"></i> Telefonlar rasmiymi va IMEI qilinganmi?</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Ha, albatta! Biz sotadigan barcha telefonlar 100% original, yangi va O'zbekiston bo'yicha IMEI ro'yxatidan rasmiy o'tkazilgan.</p>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-5 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 text-base mb-2"><i class="fa-solid fa-circle-question text-brand-600 mr-2"></i> Yetkazib berish qancha vaqt oladi?</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Toshkent shahri ichida yetkazib berish 1-2 soat ichida amalga oshiriladi va mutlaqo BEPUL!</p>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-5 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 text-base mb-2"><i class="fa-solid fa-circle-question text-brand-600 mr-2"></i> To'lovni qachon va qanday qilaman?</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">To'lovni telefonni kuryerdan qabul qilib, to'liq tekshirib olganingizdan so'ng naqd pul yoki Click / Payme orqali qilishingiz mumkin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 pt-12 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+            <p>&copy; 2026 Telbozor Toshkent. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script>
+        function submitReview(event) {
+            event.preventDefault();
+            const name = document.getElementById('reviewerName').value;
+            const rating = document.getElementById('reviewerRating').value;
+            const comment = document.getElementById('reviewerComment').value;
+
+            const container = document.getElementById('reviewsContainer');
+            
+            const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'X';
+            
+            let stars = '';
+            for(let i=0; i<rating; i++) stars += '<i class="fa-solid fa-star"></i>';
+
+            const newReviewHtml = `
+                <div class="bg-white rounded-2xl p-6 border border-brand-200 shadow-md flex flex-col justify-between animate-fade-in">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center text-sm">
+                                    ${initials}
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">${name}</h4>
+                                    <span class="text-[11px] text-brand-600 font-semibold">Hozirgina • Yangi sharh</span>
+                                </div>
+                            </div>
+                            <div class="flex text-amber-400 text-xs">
+                                ${stars}
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            "${comment}"
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-emerald-600 font-bold">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Tasdiqlangan Xaridor</span>
+                    </div>
+                </div>
+            `;
+
+            container.insertAdjacentHTML('afterbegin', newReviewHtml);
+            alert("Rahmat! Sharhingiz muvaffaqiyatli qo'shildi.");
+            event.target.reset();
+        }
+
+        // Cart counter badge update
+        window.onload = () => {
+            const cart = JSON.parse(localStorage.getItem('telbozor_cart')) || [];
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cartBadge').innerText = totalCount;
+        };
+    </script>
+</body>
+</html>
